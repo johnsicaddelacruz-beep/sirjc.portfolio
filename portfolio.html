@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Clarence Sicad Dela Cruz - L&D Professional & Technical Trainer</title>
+  <!-- Tailwind CSS CDN for styling utility -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome for vCard icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            vcardBg: '#121212',
+            vcardCard: '#1e1e1e',
+            vcardCardBorder: '#383838',
+            vcardAccent: '#ffdb70',
+            vcardText: '#d6d6d6',
+            vcardMuted: '#b5b5b5',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #121212;
+      color: #d6d6d6;
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1e1e1e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #383838;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ffdb70;
+    }
+    .active-tab {
+      color: #ffdb70 !important;
+    }
+    .page-section {
+      display: none;
+    }
+    .page-section.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-vcardBg text-vcardText min-h-screen py-6 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
+
+  <main class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+    <!-- SIDEBAR PROFILE CARD -->
+    <aside data-sidebar class="lg:col-span-4 bg-vcardCard border border-vcardCardBorder rounded-3xl p-6 sm:p-8 shadow-2xl relative transition-all duration-300">
+      <div class="flex items-center gap-4 lg:flex-col lg:items-center">
+        <!-- Avatar / Photo placeholder -->
+        <div class="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-3xl bg-[#2b2b2c] border border-[#383838] flex items-center justify-center overflow-hidden shadow-lg">
+          <img src="https://placehold.co/200x200/2b2b2c/ffdb70?text=JC" alt="John Clarence" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:text-center mt-2">
+          <h1 class="text-xl sm:text-2xl font-semibold text-white tracking-wide">John Clarence <br class="hidden lg:inline">Sicad Dela Cruz</h1>
+          <p class="inline-block px-4 py-1.5 mt-2 text-xs font-medium text-vcardAccent bg-[#2b2b2c] border border-vcardCardBorder rounded-xl">L&D Professional & Trainer</p>
+        </div>
+        <!-- Mobile Toggle Button -->
+        <button data-sidebar-btn class="lg:hidden absolute top-6 right-6 px-3 py-2 text-xs text-vcardAccent bg-[#2b2b2c] border border-vcardCardBorder rounded-xl hover:bg-[#383838] transition">
+          <span>Show Contacts</span> <i class="fa-solid fa-chevron-down ml-1"></i>
+        </button>
+      </div>
+
+      <!-- Contact Info Section (Expandable on Mobile) -->
+      <div class="mt-8 pt-6 border-t border-vcardCardBorder lg:block hidden" data-sidebar-info>
+        <ul class="space-y-6">
+          <li class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-[#2b2b2c] border border-vcardCardBorder flex items-center justify-center text-vcardAccent shadow-md shrink-0">
+              <i class="fa-solid fa-envelope text-lg"></i>
+            </div>
+            <div class="overflow-hidden">
+              <span class="text-xs text-vcardMuted uppercase tracking-wider block">Email</span>
+              <a href="mailto:john.sicad.dela.cruz@gmail.com" class="text-white text-sm font-medium hover:text-vcardAccent transition truncate block">john.sicad.dela.cruz@gmail.com</a>
+            </div>
+          </li>
+          <li class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-[#2b2b2c] border border-vcardCardBorder flex items-center justify-center text-vcardAccent shadow-md shrink-0">
+              <i class="fa-solid fa-phone text-lg"></i>
+            </div>
+            <div>
+              <span class="text-xs text-vcardMuted uppercase tracking-wider block">Phone</span>
+              <a href="tel:+639245608369" class="text-white text-sm font-medium hover:text-vcardAccent transition">+63 924 5608 369</a>
+            </div>
+          </li>
+          <li class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-[#2b2b2c] border border-vcardCardBorder flex items-center justify-center text-vcardAccent shadow-md shrink-0">
+              <i class="fa-solid fa-calendar-days text-lg"></i>
+            </div>
+            <div>
+              <span class="text-xs text-vcardMuted uppercase tracking-wider block">Specialization</span>
+              <span class="text-white text-sm font-medium">L&D & Technical Training</span>
+            </div>
+          </li>
+          <li class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-[#2b2b2c] border border-vcardCardBorder flex items-center justify-center text-vcardAccent shadow-md shrink-0">
+              <i class="fa-solid fa-location-dot text-lg"></i>
+            </div>
+            <div>
+              <span class="text-xs text-vcardMuted uppercase tracking-wider block">Location</span>
+              <span class="text-white text-sm font-medium">Muntinlupa City, Manila</span>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Social Icons -->
+        <div class="flex items-center justify-center gap-4 mt-8 pt-6 border-t border-vcardCardBorder text-vcardMuted">
+          <a href="https://linkedin.com" target="_blank" class="w-9 h-9 rounded-full bg-[#2b2b2c] border border-vcardCardBorder flex items-center justify-center hover:text-vcardAccent hover:border-vcardAccent transition"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com" target="_blank" class="w-9 h-9 rounded-full bg-[#2b2b2c] border border-vcardCardBorder flex items-center justify-center hover:text-vcardAccent hover:border-vcardAccent transition"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:john.sicad.dela.cruz@gmail.com" class="w-9 h-9 rounded-full bg-[#2b2b2c] border border-vcardCardBorder flex items-center justify-center hover:text-vcardAccent hover:border-vcardAccent transition"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <section class="lg:col-span-8 bg-vcardCard border border-vcardCardBorder rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+
+      <!-- Top Navigation Bar -->
+      <nav class="absolute top-0 right-0 bg-[#2b2b2c] border-b border-l border-vcardCardBorder rounded-bl-3xl rounded-tr-3xl px-6 py-3 hidden md:flex items-center gap-8 shadow-md z-10">
+        <button data-nav-link class="text-sm font-medium text-vcardText hover:text-vcardAccent transition active-tab" data-page="about">About</button>
+        <button data-nav-link class="text-sm font-medium text-vcardText hover:text-vcardAccent transition" data-page="resume">Resume</button>
+        <button data-nav-link class="text-sm font-medium text-vcardText hover:text-vcardAccent transition" data-page="portfolio">Portfolio</button>
+        <button data-nav-link class="text-sm font-medium text-vcardText hover:text-vcardAccent transition" data-page="contact">Contact</button>
+      </nav>
+
+      <!-- Mobile Nav Bottom/Top Bar -->
+      <div class="flex md:hidden justify-around items-center bg-[#2b2b2c] border border-vcardCardBorder rounded-2xl p-3 mb-8">
+        <button data-nav-link class="text-xs font-medium text-vcardText active-tab" data-page="about"><i class="fa-solid fa-user block text-base mb-1"></i>About</button>
+        <button data-nav-link class="text-xs font-medium text-vcardText" data-page="resume"><i class="fa-solid fa-file-lines block text-base mb-1"></i>Resume</button>
+        <button data-nav-link class="text-xs font-medium text-vcardText" data-page="portfolio"><i class="fa-solid fa-briefcase block text-base mb-1"></i>Portfolio</button>
+        <button data-nav-link class="text-xs font-medium text-vcardText" data-page="contact"><i class="fa-solid fa-envelope block text-base mb-1"></i>Contact</button>
+      </div>
+
+      <!-- ABOUT PAGE -->
+      <div data-page="about" class="page-section active pt-4 md:pt-2">
+        <header class="mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide">About Me</h2>
+          <div class="w-10 h-1 bg-vcardAccent rounded-full mt-3"></div>
+        </header>
+
+        <div class="space-y-4 text-sm sm:text-base leading-relaxed text-vcardMuted">
+          <p>
+            Training and Learning & Development professional with extensive experience in training facilitation, LMS administration, curriculum development, instructional design, technical support, and user training. Skilled in developing training materials, delivering instructor-led and virtual sessions, assessing learner performance, and simplifying complex information for diverse audiences.
+          </p>
+          <p>
+            Passionate about bridging technical complexities with clear, human-centric educational frameworks to foster growth, operational excellence, and exceptional user experiences.
+          </p>
+        </div>
+
+        <div class="mt-10">
+          <h3 class="text-xl font-semibold text-white mb-6">What I'm Doing</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Service 1 -->
+            <div class="bg-[#2b2b2c] border border-vcardCardBorder p-6 rounded-2xl flex gap-4 items-start shadow-md hover:border-vcardAccent/50 transition">
+              <div class="text-vcardAccent text-3xl mt-1"><i class="fa-solid fa-chalkboard-user"></i></div>
+              <div>
+                <h4 class="text-white font-semibold text-base mb-1">Training Facilitation</h4>
+                <p class="text-xs text-vcardMuted leading-relaxed">Delivering engaging instructor-led and virtual training sessions with high audience interaction and retention.</p>
+              </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="bg-[#2b2b2c] border border-vcardCardBorder p-6 rounded-2xl flex gap-4 items-start shadow-md hover:border-vcardAccent/50 transition">
+              <div class="text-vcardAccent text-3xl mt-1"><i class="fa-solid fa-laptop-code"></i></div>
+              <div>
+                <h4 class="text-white font-semibold text-base mb-1">Helpdesk & Tech Support</h4>
+                <p class="text-xs text-vcardMuted leading-relaxed">Guiding users through technical troubleshooting, ticket documentation, and procedural translation.</p>
+              </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-[#2b2b2c] border border-vcardCardBorder p-6 rounded-2xl flex gap-4 items-start shadow-md hover:border-vcardAccent/50 transition">
+              <div class="text-vcardAccent text-3xl mt-1"><i class="fa-solid fa-book-open-reader"></i></div>
+              <div>
+                <h4 class="text-white font-semibold text-base mb-1">Curriculum Design & LMS</h4>
+                <p class="text-xs text-vcardMuted leading-relaxed">Managing end-to-end LMS operations, lesson structures, playbooks, and targeted instructional resources.</p>
+              </div>
+            </div>
+            <!-- Service 4 -->
+            <div class="bg-[#2b2b2c] border border-vcardCardBorder p-6 rounded-2xl flex gap-4 items-start shadow-md hover:border-vcardAccent/50 transition">
+              <div class="text-vcardAccent text-3xl mt-1"><i class="fa-solid fa-palette"></i></div>
+              <div>
+                <h4 class="text-white font-semibold text-base mb-1">Visual & Graphic Design</h4>
+                <p class="text-xs text-vcardMuted leading-relaxed">Designing high-impact training materials, presentations, job aids, and visual guides.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="mt-12">
+          <h3 class="text-xl font-semibold text-white mb-6">Testimonials</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div data-testimonials-item class="bg-[#2b2b2c] border border-vcardCardBorder p-6 rounded-2xl cursor-pointer hover:border-vcardAccent transition relative shadow-lg">
+              <div class="flex items-center gap-4 mb-4">
+                <img data-testimonials-avatar src="https://placehold.co/100x100/1e1e1e/ffdb70?text=DB" alt="Daniel Brooks" class="w-14 h-14 rounded-2xl object-cover border border-vcardCardBorder">
+                <div>
+                  <h4 data-testimonials-title class="text-white font-semibold text-base">Daniel Brooks</h4>
+                  <span class="text-xs text-vcardAccent">Operations Director</span>
+                </div>
+              </div>
+              <p data-testimonials-text class="text-xs sm:text-sm text-vcardMuted leading-relaxed">
+                "John's training facilitation and onboarding programs transformed our team's readiness. His ability to distill complex technical steps into structured lessons is unmatched."
+              </p>
+            </div>
+
+            <div data-testimonials-item class="bg-[#2b2b2c] border border-vcardCardBorder p-6 rounded-2xl cursor-pointer hover:border-vcardAccent transition relative shadow-lg">
+              <div class="flex items-center gap-4 mb-4">
+                <img data-testimonials-avatar src="https://placehold.co/100x100/1e1e1e/ffdb70?text=JI" alt="Dr. Julia Ivy" class="w-14 h-14 rounded-2xl object-cover border border-vcardCardBorder">
+                <div>
+                  <h4 data-testimonials-title class="text-white font-semibold text-base">Dr. Julia Ivy</h4>
+                  <span class="text-xs text-vcardAccent">BE-EDGE Founder</span>
+                </div>
+              </div>
+              <p data-testimonials-text class="text-xs sm:text-sm text-vcardMuted leading-relaxed">
+                "Managing 100+ learners seamlessly on our LMS, John engineered comprehensive course materials that boosted learner completion and engagement rates dramatically."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESUME PAGE -->
+      <div data-page="resume" class="page-section pt-4 md:pt-2">
+        <header class="mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide">Resume</h2>
+          <div class="w-10 h-1 bg-vcardAccent rounded-full mt-3"></div>
+        </header>
+
+        <!-- Experience Timeline -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-[#2b2b2c] border border-vcardCardBorder flex items-center justify-center text-vcardAccent"><i class="fa-solid fa-briefcase"></i></div>
+            <h3 class="text-xl font-semibold text-white">Experience</h3>
+          </div>
+          <ol class="relative border-l border-vcardCardBorder ml-5 space-y-8">
+            <li class="pl-6 relative">
+              <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-vcardBg border-2 border-vcardAccent"></div>
+              <h4 class="text-white font-semibold text-base">Helpdesk Technician I</h4>
+              <p class="text-xs text-vcardAccent font-medium my-1">Stefanini Group | Pasay City <span class="text-vcardMuted">| June 2026 – Present</span></p>
+              <p class="text-xs text-vcardMuted leading-relaxed mt-2">Guide users through technical processes and troubleshooting in clear, structured language across service interactions. Document incidents, resolutions, and translate technical procedures into actionable user guides.</p>
+            </li>
+            <li class="pl-6 relative">
+              <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-vcardBg border-2 border-vcardAccent"></div>
+              <h4 class="text-white font-semibold text-base">Freelancing Coach & Business Administrator</h4>
+              <p class="text-xs text-vcardAccent font-medium my-1">Self-Employed | Remote <span class="text-vcardMuted">| January 2024 – January 2025</span></p>
+              <p class="text-xs text-vcardMuted leading-relaxed mt-2">Designed and delivered end-to-end coaching programs and practical learning resources including playbooks, job aids, pitch frameworks, and onboarding guides to strengthen learner readiness.</p>
+            </li>
+            <li class="pl-6 relative">
+              <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-vcardBg border-2 border-vcardAccent"></div>
+              <h4 class="text-white font-semibold text-base">LMS & Training Administrator</h4>
+              <p class="text-xs text-vcardAccent font-medium my-1">BE-EDGE by Dr. Julia Ivy | Remote <span class="text-vcardMuted">| January 2023 – December 2023</span></p>
+              <p class="text-xs text-vcardMuted leading-relaxed mt-2">Managed end-to-end LMS and training operations for 100+ learners, including enrollment, course delivery, scheduling, and facilitator guide production.</p>
+            </li>
+            <li class="pl-6 relative">
+              <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-vcardBg border-2 border-vcardAccent"></div>
+              <h4 class="text-white font-semibold text-base">Graphic Designer & Layout Artist</h4>
+              <p class="text-xs text-vcardAccent font-medium my-1">IT Explore Print Express | Muntinlupa <span class="text-vcardMuted">| 2018 & 2020 (2 Years Total)</span></p>
+              <p class="text-xs text-vcardMuted leading-relaxed mt-2">Designed high-impact instructional materials, presentations, and visual guides, translating client specifications into structured visual assets.</p>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Education Timeline -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-[#2b2b2c] border border-vcardCardBorder flex items-center justify-center text-vcardAccent"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3 class="text-xl font-semibold text-white">Education & Certifications</h3>
+          </div>
+          <ol class="relative border-l border-vcardCardBorder ml-5 space-y-8">
+            <li class="pl-6 relative">
+              <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-vcardBg border-2 border-vcardAccent"></div>
+              <h4 class="text-white font-semibold text-base">Bachelor of Secondary Education, Major in English</h4>
+              <p class="text-xs text-vcardAccent font-medium my-1">Pamantasan ng Lungsod ng Muntinlupa (PLMun) <span class="text-vcardMuted">| Graduated July 2026</span></p>
+            </li>
+            <li class="pl-6 relative">
+              <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-vcardBg border-2 border-vcardAccent"></div>
+              <h4 class="text-white font-semibold text-base">TESDA Online Program Technical Skills Certification</h4>
+              <p class="text-xs text-vcardAccent font-medium my-1">Technical Education and Skills Development Authority <span class="text-vcardMuted">| 2022 – 2025</span></p>
+              <p class="text-xs text-vcardMuted leading-relaxed mt-1">TVET Trainers Methodology I & II (Facilitating Training & Curriculum Development), Visual Graphic Design, Digital Literacy, and MSME Management.</p>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Skills Bars -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-6">Core Competencies & Skills</h3>
+          <div class="bg-[#2b2b2c] border border-vcardCardBorder p-6 rounded-2xl space-y-6">
+            <div>
+              <div class="flex justify-between text-sm mb-2 text-white"><span>Training Facilitation & Instruction</span><span class="text-vcardAccent">95%</span></div>
+              <div class="w-full h-2.5 bg-[#121212] rounded-full overflow-hidden"><div class="h-full bg-vcardAccent rounded-full" style="width: 95%;"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-2 text-white"><span>LMS Administration & Course Management</span><span class="text-vcardAccent">90%</span></div>
+              <div class="w-full h-2.5 bg-[#121212] rounded-full overflow-hidden"><div class="h-full bg-vcardAccent rounded-full" style="width: 90%;"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-2 text-white"><span>Instructional Design & Content Creation</span><span class="text-vcardAccent">92%</span></div>
+              <div class="w-full h-2.5 bg-[#121212] rounded-full overflow-hidden"><div class="h-full bg-vcardAccent rounded-full" style="width: 92%;"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-2 text-white"><span>Technical Support & User Assistance</span><span class="text-vcardAccent">88%</span></div>
+              <div class="w-full h-2.5 bg-[#121212] rounded-full overflow-hidden"><div class="h-full bg-vcardAccent rounded-full" style="width: 88%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PORTFOLIO PAGE -->
+      <div data-page="portfolio" class="page-section pt-4 md:pt-2">
+        <header class="mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide">Portfolio</h2>
+          <div class="w-10 h-1 bg-vcardAccent rounded-full mt-3"></div>
+        </header>
+
+        <!-- Filter Buttons (Desktop & Custom Select for Mobile) -->
+        <div class="flex flex-wrap gap-3 mb-8">
+          <button data-filter-btn class="px-4 py-2 text-xs font-medium text-vcardAccent bg-[#2b2b2c] border border-vcardCardBorder rounded-xl active transition hover:border-vcardAccent">All</button>
+          <button data-filter-btn class="px-4 py-2 text-xs font-medium text-vcardMuted bg-[#2b2b2c] border border-vcardCardBorder rounded-xl transition hover:text-vcardAccent hover:border-vcardAccent" data-category="training">Training & LMS</button>
+          <button data-filter-btn class="px-4 py-2 text-xs font-medium text-vcardMuted bg-[#2b2b2c] border border-vcardCardBorder rounded-xl transition hover:text-vcardAccent hover:border-vcardAccent" data-category="design">Visual & Graphic Design</button>
+          <button data-filter-btn class="px-4 py-2 text-xs font-medium text-vcardMuted bg-[#2b2b2c] border border-vcardCardBorder rounded-xl transition hover:text-vcardAccent hover:border-vcardAccent" data-category="leadership">Leadership & Events</button>
+        </div>
+
+        <!-- Portfolio Items Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Item 1 -->
+          <div data-filter-item data-category="training" class="bg-[#2b2b2c] border border-vcardCardBorder rounded-2xl overflow-hidden group shadow-lg transition hover:border-vcardAccent/60">
+            <div class="h-48 bg-[#1e1e1e] relative overflow-hidden flex items-center justify-center">
+              <img src="https://placehold.co/600x400/1e1e1e/ffdb70?text=LMS+Portal+Operations" alt="LMS Portal" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80">
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                <span class="w-10 h-10 rounded-xl bg-vcardAccent text-black flex items-center justify-center text-sm"><i class="fa-solid fa-eye"></i></span>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-white font-semibold text-base mb-1">BE-EDGE LMS Operations</h3>
+              <p class="text-xs text-vcardAccent">Training & LMS</p>
+              <p class="text-xs text-vcardMuted mt-2">End-to-end LMS administration, learner scheduling, onboarding kits, and progress tracking for 100+ participants.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div data-filter-item data-category="design" class="bg-[#2b2b2c] border border-vcardCardBorder rounded-2xl overflow-hidden group shadow-lg transition hover:border-vcardAccent/60">
+            <div class="h-48 bg-[#1e1e1e] relative overflow-hidden flex items-center justify-center">
+              <img src="https://placehold.co/600x400/1e1e1e/ffdb70?text=Instructional+Job+Aids" alt="Job Aids" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80">
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                <span class="w-10 h-10 rounded-xl bg-vcardAccent text-black flex items-center justify-center text-sm"><i class="fa-solid fa-eye"></i></span>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-white font-semibold text-base mb-1">Instructional Playbooks & Job Aids</h3>
+              <p class="text-xs text-vcardAccent">Visual & Graphic Design</p>
+              <p class="text-xs text-vcardMuted mt-2">High-impact visual guides and coaching pitch frameworks designed for clear knowledge retention.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div data-filter-item data-category="training" class="bg-[#2b2b2c] border border-vcardCardBorder rounded-2xl overflow-hidden group shadow-lg transition hover:border-vcardAccent/60">
+            <div class="h-48 bg-[#1e1e1e] relative overflow-hidden flex items-center justify-center">
+              <img src="https://placehold.co/600x400/1e1e1e/ffdb70?text=Helpdesk+Documentation" alt="Helpdesk" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80">
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                <span class="w-10 h-10 rounded-xl bg-vcardAccent text-black flex items-center justify-center text-sm"><i class="fa-solid fa-eye"></i></span>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-white font-semibold text-base mb-1">Technical Helpdesk Workflows</h3>
+              <p class="text-xs text-vcardAccent">Training & LMS</p>
+              <p class="text-xs text-vcardMuted mt-2">Step-by-step troubleshooting manuals and structured user guidance for IT support teams at Stefanini Group.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div data-filter-item data-category="leadership" class="bg-[#2b2b2c] border border-vcardCardBorder rounded-2xl overflow-hidden group shadow-lg transition hover:border-vcardAccent/60">
+            <div class="h-48 bg-[#1e1e1e] relative overflow-hidden flex items-center justify-center">
+              <img src="https://placehold.co/600x400/1e1e1e/ffdb70?text=Conversational+Ninja+Webinars" alt="Webinars" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80">
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                <span class="w-10 h-10 rounded-xl bg-vcardAccent text-black flex items-center justify-center text-sm"><i class="fa-solid fa-eye"></i></span>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-white font-semibold text-base mb-1">Conversational Ninja Webinars</h3>
+              <p class="text-xs text-vcardAccent">Leadership & Events</p>
+              <p class="text-xs text-vcardMuted mt-2">Interactive facilitation, program coordination, and public engagement for PLMun-CTE communication programs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT PAGE -->
+      <div data-page="contact" class="page-section pt-4 md:pt-2">
+        <header class="mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide">Contact</h2>
+          <div class="w-10 h-1 bg-vcardAccent rounded-full mt-3"></div>
+        </header>
+
+        <!-- Google Map placeholder / Location info -->
+        <div class="mb-8 rounded-2xl overflow-hidden border border-vcardCardBorder h-56 bg-[#2b2b2c] relative flex items-center justify-center">
+          <div class="text-center px-4">
+            <i class="fa-solid fa-map-location-dot text-3xl text-vcardAccent mb-2"></i>
+            <h4 class="text-white font-semibold">Muntinlupa City, Manila, Philippines</h4>
+            <p class="text-xs text-vcardMuted mt-1">Available for remote L&D consulting, training facilitation, and technical support roles.</p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-white mb-6">Contact Form</h3>
+        <form data-form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input type="text" name="fullname" data-form-input placeholder="Full name" required class="w-full bg-[#2b2b2c] border border-vcardCardBorder rounded-xl px-4 py-3 text-sm text-white placeholder-vcardMuted focus:outline-none focus:border-vcardAccent transition">
+            <input type="email" name="email" data-form-input placeholder="Email address" required class="w-full bg-[#2b2b2c] border border-vcardCardBorder rounded-xl px-4 py-3 text-sm text-white placeholder-vcardMuted focus:outline-none focus:border-vcardAccent transition">
+          </div>
+          <textarea name="message" data-form-input placeholder="Your Message" rows="5" required class="w-full bg-[#2b2b2c] border border-vcardCardBorder rounded-xl px-4 py-3 text-sm text-white placeholder-vcardMuted focus:outline-none focus:border-vcardAccent transition resize-none"></textarea>
+          
+          <div class="flex justify-end">
+            <button type="submit" data-form-btn disabled class="flex items-center gap-2 px-7 py-3 rounded-xl bg-vcardAccent text-black font-medium text-sm transition hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg">
+              <i class="fa-solid fa-paper-plane"></i><span>Send Message</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- TESTIMONIAL MODAL -->
+  <div data-modal-container class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div data-overlay class="absolute inset-0"></div>
+    <div class="bg-vcardCard border border-vcardCardBorder rounded-3xl p-6 sm:p-8 max-w-lg w-full relative z-10 shadow-2xl transform scale-95 transition-transform duration-300" id="modal-content-box">
+      <button data-modal-close-btn class="absolute top-4 right-4 w-9 h-9 rounded-xl bg-[#2b2b2c] border border-vcardCardBorder text-vcardMuted flex items-center justify-center hover:text-white transition"><i class="fa-solid fa-xmark text-base"></i></button>
+      <div class="flex items-center gap-4 mb-4">
+        <img data-modal-img src="" alt="avatar" class="w-16 h-16 rounded-2xl object-cover border border-vcardCardBorder">
+        <div>
+          <h4 data-modal-title class="text-white font-semibold text-lg"></h4>
+          <span class="text-xs text-vcardAccent">Verified Recommendation</span>
+        </div>
+      </div>
+      <p data-modal-text class="text-sm text-vcardMuted leading-relaxed border-t border-vcardCardBorder pt-4 mt-2"></p>
+    </div>
+  </div>
+
+  <script>
+    'use strict';
+
+    // Element toggle function
+    const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+
+    // Sidebar variables for mobile view
+    const sidebar = document.querySelector("[data-sidebar]");
+    const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+    const sidebarInfo = document.querySelector("[data-sidebar-info]");
+
+    sidebarBtn.addEventListener("click", function () {
+      sidebarInfo.classList.toggle("hidden");
+      const span = sidebarBtn.querySelector("span");
+      span.innerText = sidebarInfo.classList.contains("hidden") ? "Show Contacts" : "Hide Contacts";
+    });
+
+    // Testimonials modal variables
+    const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+    const modalContainer = document.querySelector("[data-modal-container]");
+    const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+    const overlay = document.querySelector("[data-overlay]");
+    const modalImg = document.querySelector("[data-modal-img]");
+    const modalTitle = document.querySelector("[data-modal-title]");
+    const modalText = document.querySelector("[data-modal-text]");
+
+    const testimonialsModalFunc = function () {
+      modalContainer.classList.toggle("opacity-0");
+      modalContainer.classList.toggle("pointer-events-none");
+    }
+
+    for (let i = 0; i < testimonialsItem.length; i++) {
+      testimonialsItem[i].addEventListener("click", function () {
+        modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+        modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+        modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+        modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+        testimonialsModalFunc();
+      });
+    }
+
+    modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+    overlay.addEventListener("click", testimonialsModalFunc);
+
+    // Portfolio filter variables & logic
+    const filterBtn = document.querySelectorAll("[data-filter-btn]");
+    const filterItems = document.querySelectorAll("[data-filter-item]");
+
+    const filterFunc = function (selectedValue) {
+      for (let i = 0; i < filterItems.length; i++) {
+        if (selectedValue === "all") {
+          filterItems[i].style.display = "block";
+        } else if (selectedValue === filterItems[i].dataset.category) {
+          filterItems[i].style.display = "block";
+        } else {
+          filterItems[i].style.display = "none";
+        }
+      }
+    }
+
+    let lastClickedBtn = filterBtn[0];
+    for (let i = 0; i < filterBtn.length; i++) {
+      filterBtn[i].addEventListener("click", function () {
+        let selectedValue = this.innerText.toLowerCase();
+        if(selectedValue.includes("training")) selectedValue = "training";
+        else if(selectedValue.includes("design")) selectedValue = "design";
+        else if(selectedValue.includes("leadership")) selectedValue = "leadership";
+        else selectedValue = "all";
+
+        filterFunc(selectedValue);
+
+        lastClickedBtn.classList.remove("text-vcardAccent", "active");
+        lastClickedBtn.classList.add("text-vcardMuted");
+        this.classList.add("text-vcardAccent", "active");
+        this.classList.remove("text-vcardMuted");
+        lastClickedBtn = this;
+      });
+    }
+
+    // Contact form validation variables & logic
+    const form = document.querySelector("[data-form]");
+    const formInputs = document.querySelectorAll("[data-form-input]");
+    const formBtn = document.querySelector("[data-form-btn]");
+
+    for (let i = 0; i < formInputs.length; i++) {
+      formInputs[i].addEventListener("input", function () {
+        if (form.checkValidity()) {
+          formBtn.removeAttribute("disabled");
+        } else {
+          formBtn.setAttribute("disabled", "");
+        }
+      });
+    }
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      // Safe non-alert confirmation feedback box
+      const successBox = document.createElement("div");
+      successBox.className = "fixed bottom-5 right-5 bg-vcardAccent text-black px-6 py-3 rounded-2xl shadow-2xl font-medium text-sm z-50 transition-all";
+      successBox.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i> Message sent successfully!';
+      document.body.appendChild(successBox);
+      form.reset();
+      formBtn.setAttribute("disabled", "");
+      setTimeout(() => { successBox.remove(); }, 4000);
+    });
+
+    // Page navigation variables & logic
+    const navigationLinks = document.querySelectorAll("[data-nav-link]");
+    const pages = document.querySelectorAll("[data-page]");
+
+    for (let i = 0; i < navigationLinks.length; i++) {
+      navigationLinks[i].addEventListener("click", function () {
+        const targetPage = this.dataset.page;
+        
+        for (let j = 0; j < pages.length; j++) {
+          if (targetPage === pages[j].dataset.page) {
+            pages[j].classList.add("active");
+            window.scrollTo(0, 0);
+          } else {
+            pages[j].classList.remove("active");
+          }
+        }
+
+        for (let k = 0; k < navigationLinks.length; k++) {
+          if (navigationLinks[k].dataset.page === targetPage) {
+            navigationLinks[k].classList.add("active-tab");
+          } else {
+            navigationLinks[k].classList.remove("active-tab");
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
